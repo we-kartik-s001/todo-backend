@@ -34,7 +34,7 @@ class TaskController extends Controller
 
         return response([
             'status' => 1,
-            'task' => Task::all()
+            'task' => Task::orderBy('created_at','desc')->get()
         ]);
     }
 
